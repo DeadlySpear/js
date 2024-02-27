@@ -1,0 +1,86 @@
+.heading{
+  font-weight: bold;
+  font-size: 25px;
+  color:aliceblue;
+}
+.move{
+  color: white;
+}
+.winLoss {
+  color: white;
+  font-weight: 100;
+}
+.rockImg{
+  background-color: black;
+  height: 50px;
+  
+  
+}
+.rock{
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: black;
+  border-style: solid;
+  border-color: white;
+}
+.rock:hover{
+  cursor: pointer;
+}
+.pprImg{
+  background-color: black;
+  height: 50px;
+
+  
+}
+.ppr{
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: black;
+  border-style: solid;
+  border-color: white;
+}
+.ppr:hover{
+  cursor: pointer;
+}
+.scisImg{
+  background-color: black;
+  height: 50px;
+  
+  
+}
+.scis{
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: black;
+  border-style: solid;
+  border-color: white;
+}
+.scis:hover{
+  cursor: pointer;
+}
+.reset:hover{
+  cursor: pointer;
+}
+.rps-buttons{
+  width: 400px;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.your-move{
+  background-color: black;
+  height: 50px;
+  margin-left: 1em;
+  margin-right: 10px;
+}
+.computer-move{
+  background-color: black;
+  height: 50px;
+  margin-right: 1em;
+}
+.score{
+  color: white;
+}
