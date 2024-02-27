@@ -10,13 +10,13 @@
   color: white;
   font-weight: 100;
 }
-.rockImg{
+.move-icon{
   background-color: black;
   height: 50px;
   
   
 }
-.rock{
+.move-holder{
   height: 100px;
   width: 100px;
   border-radius: 50%;
@@ -24,44 +24,7 @@
   border-style: solid;
   border-color: white;
 }
-.rock:hover{
-  cursor: pointer;
-}
-.pprImg{
-  background-color: black;
-  height: 50px;
-
-  
-}
-.ppr{
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-  background-color: black;
-  border-style: solid;
-  border-color: white;
-}
-.ppr:hover{
-  cursor: pointer;
-}
-.scisImg{
-  background-color: black;
-  height: 50px;
-  
-  
-}
-.scis{
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-  background-color: black;
-  border-style: solid;
-  border-color: white;
-}
-.scis:hover{
-  cursor: pointer;
-}
-.reset:hover{
+.move-icon:hover{
   cursor: pointer;
 }
 .rps-buttons{
