@@ -22,7 +22,7 @@
   border-style: solid;
   border-color: white;
 }
-.move-icon:hover{
+.move-holder:hover{
   cursor: pointer;
 }
 .rps-buttons{
