@@ -49,7 +49,7 @@ function playGame(playerMove) {
 
   localStorage.setItem('score', JSON.stringify(score));
   updateScoreElem();
-  document.querySelector(".move").innerHTML= `You <img class="your-move" src="rps_icons/${playerMove}-emoji.png"><img class="computer-move" src="rps_icons/${computerMove}-emoji.png">Computer`;
+  document.querySelector(".move").innerHTML= `You<img class="your-move" src="rps_icons/${playerMove}-emoji.png"><img class="computer-move" src="rps_icons/${computerMove}-emoji.png">Computer`;
   document.querySelector(".winLoss").innerHTML= `${result}`
 }
 
@@ -78,9 +78,10 @@ function reset(){
   score.ties = 0;
   localStorage.removeItem('score');
   updateScoreElem();
-  document.querySelector(".move").innerHTML=`You <img class= "your-move" src="rps_icons/rock-emoji.png"><img class= "computer-move" src="rps_icons/rock-emoji.png">Computer`;
+  document.querySelector(".winLoss").innerHTML=null;
+  document.querySelector(".move").innerHTML=`You<img class= "your-move" src="rps_icons/rock-emoji.png"><img class= "computer-move" src="rps_icons/rock-emoji.png">Computer`;
   stopRep(a);
-  autoplayButton()
+  autoplayButton();
 }
 function autoGame(){
   playerMove=pickComputerMove()
