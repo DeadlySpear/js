@@ -45,3 +45,6 @@
 .score{
   color: white;
 }
+.autoplay-stop{
+  display: inline;
+}

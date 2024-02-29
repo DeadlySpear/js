@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Rock Paper Scissors</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="rps.css">
   </head>
   <body style="background-color: black;    font-family: Arial;
   ">
@@ -30,13 +30,10 @@
     
     <p class="score"></p>
 
-    <button class="reset" onclick="
-      score.wins = 0;
-      score.losses = 0;
-      score.ties = 0;
-      localStorage.removeItem('score');
-      updateScoreElem();
-    ">Reset Score</button>
+    <button class="reset" onclick="reset()">Reset</button>
+    <div class="autoplay-stop"><button class="autoplay" onclick="a=gameRunner();stopButton();">
+      Autoplay</button></div>
+    
     
 
     <script src="rps.js"></script>

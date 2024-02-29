@@ -61,7 +61,6 @@ function pickComputerMove() {
 
   if (randomNumber >= 0 && randomNumber < 1 / 3) {
     computerMove = 'rock';
-    document.queryselector(".move")
   } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
     computerMove = 'paper';
   } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
@@ -72,4 +71,31 @@ function pickComputerMove() {
 } 
 function updateScoreElem(){
   document.querySelector(".score").innerHTML=`Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
+}
+function reset(){
+  score.wins = 0;
+  score.losses = 0;
+  score.ties = 0;
+  localStorage.removeItem('score');
+  updateScoreElem();
+  document.querySelector(".move").innerHTML=`You<img class= "your-move" src="rps_icons/rock-emoji.png"><img class= "computer-move" src="rps_icons/rock-emoji.png"> Computer`;
+  stopRep(a);
+  autoplayButton()
+}
+function autoGame(){
+  playerMove=pickComputerMove()
+  playGame(playerMove);
+}
+function gameRunner(){
+  a=setInterval(autoGame,1000)
+  return a;
+}
+function stopRep(a){
+  clearInterval(a)
+}
+function autoplayButton(){document.querySelector(".autoplay-stop").innerHTML=`<button class="autoplay" onclick="gameRunner();stopButton()">
+  Autoplay</button>`}
+
+function stopButton(){
+  document.querySelector(".autoplay-stop").innerHTML=`<button class="stop" onclick="stopRep(a);autoplayButton()">Stop</button>`
 }
