@@ -2,17 +2,14 @@
 <HTML>
   <head>
     <title>To-Do</title>
-    <link rel="stylesheet" href="todo.css">
   </head>
-  
   <body>
-    <div class="head">
-      <input class="jsToDoName" placeholder="Todo Name" onkeydown="if (event.key ==='Enter'){
-        addTodo();
-      }"><input class="jsDate"type="date">
-      <button onclick="addTodo();">Add</button>
-    </div>
-    <div class="js-todo-list todoGrid"></div>
+    <input class="jsToDoName" placeholder="Todo Name" onkeydown="if (event.key ==='Enter'){
+      addTodo();
+    }">
+    <button onclick="addTodo();">Add</button>
+
+    <div class="js-todo-list"></div>
   </body>
   <script src="todo.js">
   </script>
