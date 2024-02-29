@@ -2,12 +2,12 @@ let todoList = [];
 let todoListHTML = ``;
 todoRender();
 
-
 function addTodo() {
   const inputElem = document.querySelector(".jsToDoName");
   const name = inputElem.value;
-  todoList.push(name);
-  console.log(todoList);
+  const date = document.querySelector(".jsDate").value;
+  const todoObj = {name,date}
+  todoList.push(todoObj);
   todoRender();
 }
 
@@ -24,8 +24,9 @@ function deleteTodo(i){
 
 function todoRender() {
   for (let i = 0; i < todoList.length; i++) {
-    const todo = todoList[i];
-    let html = `<p>${todo} <button onclick="deleteTodo(${i})">Delete</button></p>`;
+    const todo = todoList[i].name;
+    const date = todoList[i].date; 
+    let html = `<div>${todo}</div><div>${date || null}</div><div><button onclick="deleteTodo(${i})">Delete</button></div>`;
     todoListHTML += html;
     document.querySelector(".js-todo-list").innerHTML = todoListHTML;
   }
